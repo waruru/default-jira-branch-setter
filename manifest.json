@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Default Jira Branch Setter",
+  "version": "1.0.5",
+  "description": "set the default branch",
+  "content_scripts": [
+    {
+      "matches": ["https://github.atlassian.com/github/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["tabs","scripting","storage"],
+  "host_permissions": ["https://github.atlassian.com/github/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_popup_width": 400
+  }
+}
